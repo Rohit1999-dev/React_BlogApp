@@ -1,17 +1,17 @@
 // import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
+import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 
 function Blogform() {
-
+    const navigate = useNavigate();
     const [msg, setMsg] = useState({
         _id: (''),
         title: '',
         subtitle: '',
         Description: ''
       });
-    
     
       const handleInputChange = (e) => {
         const name = e.target.name;
@@ -24,6 +24,7 @@ function Blogform() {
     const submitButton = async(e)=>{
       alert("submitted sucessfully !");
       e.preventDefault();
+      navigate('/home')
       setMsg({title: '', subtitle: '', Description: ''});
       try {
         await axios.post('http://localhost:8000/post/', {  // post form data API

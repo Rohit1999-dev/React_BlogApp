@@ -1,12 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import {useNavigate} from 'react-router-dom';
 function Blog() {
-
-const [opinion, setBlog] = useState([])
-const [records, setRecords] = useState([])
-const [filterData, setFilterData] = useState('');
+  const navigate = useNavigate();
+  const [opinion, setBlog] = useState([])
+  const [records, setRecords] = useState([])
+  const [filterData, setFilterData] = useState('');
 // const getDataArray = async()=>{
 //   axios.get('http://localhost:8000/get')
 //   .then(res =>{
@@ -53,6 +53,12 @@ const deleteData = async(_id)=>{ // delete api by id for frontend code
   }
   
 }
+
+const logOutButton = async(e)=>{
+  alert("Logout Sucessfully !");
+      e.preventDefault();
+      navigate('/signup');
+}
   
   return (
     <>
@@ -66,15 +72,14 @@ const deleteData = async(_id)=>{ // delete api by id for frontend code
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="!#">Home</a>
+                <a class="nav-link" aria-current="page" to={"/home"} href="/home">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" to={"/blogForm"} href="/blogForm">Blog Form</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <button class="btn btn-outline-success" onClick={logOutButton} type="submit">Log Out</button>
             </form>
           </div>
         </div>
