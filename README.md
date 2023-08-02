@@ -28,4 +28,5 @@ Feature are: -
 2. Showing list of blog which is in database.
 3. Deleting specific blog, which you want to delete it.
 4. Filter the blog part functionality.
-5. Update blog list is in progress, working on it.
+5. Signup, login & logout - For visiting this website, need to create account then login.
+6. Update blog list is in progress, working on it.
