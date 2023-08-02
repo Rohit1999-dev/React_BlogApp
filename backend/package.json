@@ -4,7 +4,8 @@
   "description": "About express with mongoose db",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon app.js",
+    "build": "npm i"
   },
   "author": "Express js",
   "license": "ISC",
