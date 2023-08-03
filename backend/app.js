@@ -16,7 +16,7 @@ app.use(cors());
 
 
 mongoose.set('strictQuery', true);
-mongoose.connect('mongodb://localhost:27017/blogProject', 
+mongoose.connect('mongodb://127.0.0.1:27017/blogProject', 
 {
     useNewUrlParser: true, 
     useUnifiedTopology: true
