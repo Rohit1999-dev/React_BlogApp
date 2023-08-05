@@ -72,10 +72,10 @@ const logOutButton = async(e)=>{
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" to={"/"} href="/home">Home</a>
+                <a class="nav-link" aria-current="page" to={"/home"} href="/home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" to={"/"} href="/blogForm">Blog Form</a>
+                <a class="nav-link" to={"/blogForm"} href="/blogForm">Blog Form</a>
               </li>
             </ul>
             <form class="d-flex" role="search">

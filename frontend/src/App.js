@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Blog from './components/blog';
-import Blogform from './components/blogform';
+import BlogPage from './components/blogform';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './components/login';
-import SignUp from './components/signup';
+import SignUpPage from './components/signup';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         />
         <Route
             path="/signup"
-            element={ <SignUp/> }
+            element={ <SignUpPage/> }
         />
         <Route
             path="/home"
@@ -24,7 +24,7 @@ function App() {
         />
         <Route
             path="/blogForm"
-            element={ <Blogform /> }
+            element={ <BlogPage /> }
         />
     </Routes>
 </BrowserRouter>

@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+var path = require('path');
 const mongoose = require('mongoose');
 const blog = require('./blog');
 const signup = require('./signup');
@@ -34,6 +35,7 @@ app.get('/get',cors(), async(req, res)=>{
         console.log(error);
     }
 })
+
 
 app.post('/post', async(req, res)=>{ // create blog API
     const Blog = new blog({
