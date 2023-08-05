@@ -83,7 +83,7 @@ function Login() {
                                           </button>
                                           </div>
                                           <div class="text-center">
-                                          <p class="mb-5 pb-lg-2" to={'/signup'}>If we do not have account so create here <a href="/signup"
+                                          <p class="mb-5 pb-lg-2" to={'/'}>If we do not have account so create here <a href="/signup"
                                                   >Sign Up</a></p>
                                           </div>
                                       </form>
