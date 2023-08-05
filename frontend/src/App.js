@@ -4,7 +4,7 @@ import Blog from './components/blog';
 import BlogPage from './components/blogform';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './components/login';
-import SignUpPage from './components/signup';
+import SignUp from './components/signup';
 
 function App() {
   return (
@@ -15,16 +15,16 @@ function App() {
             element={ <Login/> }
         />
         <Route
-            path="/signup"
-            element={ <SignUpPage/> }
+            path="/signuppage"
+            element={ <SignUp/> }
         />
         <Route
             path="/home"
-            element={ <Blog /> }
+            element={ <Blog/> }
         />
         <Route
-            path="/blogForm"
-            element={ <BlogPage /> }
+            path="/blogform"
+            element={ <BlogPage/> }
         />
     </Routes>
 </BrowserRouter>

@@ -58,7 +58,7 @@ const deleteData = async(_id)=>{ // delete api by id for frontend code
 const logOutButton = async(e)=>{
   alert("Logout Sucessfully !");
       e.preventDefault();
-      navigate('/signup');
+      navigate('/signuppage');
 }
   
   return (
@@ -76,7 +76,7 @@ const logOutButton = async(e)=>{
                 <a class="nav-link" aria-current="page" to={"/home"} href="/home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" to={"/blogForm"} href="/blogForm">Blog Form</a>
+                <a class="nav-link" to={"/blogform"} href="/blogform">Blog Form</a>
               </li>
             </ul>
             <form class="d-flex" role="search">

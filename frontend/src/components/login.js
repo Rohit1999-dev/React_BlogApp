@@ -29,14 +29,14 @@ function Login() {
                     navigate('/home') 
                 }else if(res.data === 'User not exist !'){
                     alert('User not exist !');
-                    navigate('/signup');
+                    navigate('/signuppage');
                 }else if(res.data === 'email invalid !'){
                     alert('Email not exist !');
-                    navigate('/signup');
+                    navigate('/signuppage');
                 }
                 else{
                     alert('Password invalid !');
-                    navigate('/signup');
+                    navigate('/signuppage');
                 }
                 
             })
@@ -83,7 +83,7 @@ function Login() {
                                           </button>
                                           </div>
                                           <div class="text-center">
-                                          <p class="mb-5 pb-lg-2" to={'/signup'}>If we do not have account so create here <a href="/signup"
+                                          <p class="mb-5 pb-lg-2" to={'/signuppage'}>If we do not have account so create here <a href="/signuppage"
                                                   >Sign Up</a></p>
                                           </div>
                                       </form>
