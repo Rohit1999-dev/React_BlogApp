@@ -36,6 +36,14 @@ app.get('/get',cors(), async(req, res)=>{
     }
 })
 
+app.get('/blogform',cors(), async(req, res)=>{
+    try {
+        const Blog = await blog.find();
+        res.status(200).send(Blog);
+    } catch (error) {
+        console.log(error);
+    }
+})
 
 app.post('/post', async(req, res)=>{ // create blog API
     const Blog = new blog({

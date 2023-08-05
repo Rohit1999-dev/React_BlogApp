@@ -83,8 +83,7 @@ function Login() {
                                           </button>
                                           </div>
                                           <div class="text-center">
-                                          <p class="mb-5 pb-lg-2" to={'/signuppage'}>If we do not have account so create here <a href="/signuppage"
-                                                  >Sign Up</a></p>
+                                          <button class="mb-5 pb-lg-2" onClick={()=>{navigate('/signuppage', {replace: true})}}>signup</button>
                                           </div>
                                       </form>
                                   </div>

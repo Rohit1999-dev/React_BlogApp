@@ -25,7 +25,7 @@ function SignUp() {
     const submitSignUp = async(e) =>{
         alert("submitted signup sucessfully !");
         e.preventDefault();
-        navigate('/login');
+        navigate('/');
         try {
             await axios.post('https://reactblog-0n93.onrender.com/signup/', {  // post form data API
             firstName: signUp.firstName,
@@ -88,8 +88,9 @@ function SignUp() {
                                           </button>
 
                                           <div class="text-center">
-                                          <p class="mb-5 pb-lg-2" to={'/'}>If we have account so Directly<a href="/"
-                                                  >Login here</a></p>
+                                          <p>Already account ! <button type="submit" onClick={()=>{navigate('/')}}>
+                                              Sign In
+                                          </button></p>
                                           </div>
                                       </form>
                                   </div>
