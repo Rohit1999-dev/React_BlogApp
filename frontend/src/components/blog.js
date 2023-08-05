@@ -45,6 +45,7 @@ const deleteData = async(_id)=>{ // delete api by id for frontend code
       .then(res => {
         console.log(res.data);
         alert('data is deleted !')
+        navigate('/blogform');
       }).catch(err => {
         console.log(err);
       })
