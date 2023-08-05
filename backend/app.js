@@ -3,20 +3,20 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const blog = require('./blog');
 const signup = require('./signup');
+require('dotenv').config()
+
 
 const bodyParser = require('body-parser');
 const SignUp = require('./signup');
 const app = express();
-const port = 8000;
 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-
 mongoose.set('strictQuery', true);
-mongoose.connect('mongodb://127.0.0.1:27017/blogProject', 
+mongoose.connect(process.env.MONGO_DB_NAME, 
 {
     useNewUrlParser: true, 
     useUnifiedTopology: true
@@ -110,6 +110,6 @@ app.post('/login', async(req, res)=>{
    })
 })
 
-app.listen(port, (req, res)=>{
-    console.log(`Server connected !` + port);
+app.listen(process.env.PORT || 3080, (req, res)=>{
+    console.log(`Server connected !` + process.env.PORT);
 })
