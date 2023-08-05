@@ -27,7 +27,7 @@ function Blogform() {
       navigate('/home')
       setMsg({title: '', subtitle: '', Description: ''});
       try {
-        await axios.post('http://localhost:8000/post/', {  // post form data API
+        await axios.post('https://reactblog-0n93.onrender.com/post/', {  // post form data API
           title: msg.title,
           subtitle: msg.subtitle,
           Description: msg.Description

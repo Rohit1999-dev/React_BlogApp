@@ -27,7 +27,7 @@ function SignUp() {
         e.preventDefault();
         navigate('/login');
         try {
-            await axios.post('http://localhost:8000/signup/', {  // post form data API
+            await axios.post('https://reactblog-0n93.onrender.com/signup/', {  // post form data API
             firstName: signUp.firstName,
             lastName: signUp.lastName,
             email: signUp.email,

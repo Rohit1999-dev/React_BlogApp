@@ -19,7 +19,7 @@ function Blog() {
 // }
 
 useEffect(()=>{  // get all blogs API
-  axios.get('http://localhost:8000/get')
+  axios.get('https://reactblog-0n93.onrender.com/get')
   .then(opinion =>{
     setBlog(opinion.data)
     setRecords(opinion.data);
@@ -41,7 +41,7 @@ const Filter = (e)=>{  // filter data based on title
 
 const deleteData = async(_id)=>{ // delete api by id for frontend code
   if(window.confirm(`Are you sure you want to delete ${_id}`)){
-    axios.delete('http://localhost:8000/remove/' + _id)
+    axios.delete('https://reactblog-0n93.onrender.com/remove/' + _id)
       .then(res => {
         console.log(res.data);
         alert('data is deleted !')

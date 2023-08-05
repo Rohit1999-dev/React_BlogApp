@@ -20,7 +20,7 @@ function Login() {
         // alert("submitted login sucessfully !");
         e.preventDefault();
         try {
-            await axios.post('http://localhost:8000/login/', {  // post form data API
+            await axios.post('https://reactblog-0n93.onrender.com/login/', {  // post form data API
             email,
             password
             })
