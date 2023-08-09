@@ -4,7 +4,7 @@ This project frontend based on react js with bootstrap.
 
 ## npm install
 
-Above command will install all the library which is package.json file.
+Above command will install all the library which is available inside the package.json file.
 
 So before start the project, you all need to do basic set-up with backend code.
 
@@ -18,9 +18,9 @@ From Above command, your backend server get started.
 
 ## Description
 
-This project is combination of backend with mongodb database & frontend of React js.
+This project is combination of backend express js with mongodb database & frontend of React js.
 
-Basically we are adding opinion/blog by form page submission.
+Basically we are adding opinion/blog by form page submission after login on this sites.
 
 Feature are: -
 
@@ -30,3 +30,5 @@ Feature are: -
 4. Filter the blog part functionality.
 5. Signup, login & logout - For visiting this website, need to create account then login.
 6. Update blog list is in progress, working on it.
+
+Deployed link of this project  -  https://simple-reactblog-app.netlify.app/
