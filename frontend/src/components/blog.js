@@ -83,17 +83,17 @@ const logOutButton = async(e)=>{
     <div className='container' style={{backgroundColor: "skyblue"}}>
       <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" sticky="top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="!#"><b>Opinion App</b></a>
+          <a class="navbar-brand" href="/home" onClick={()=>{navigate('/home')}}><b>Opinion App</b></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <p class="nav-link" aria-current="page" onClick={()=>{navigate('/home')}}>Home</p>
+                <a href='/home' class="nav-link" aria-current="page" onClick={()=>{navigate('/home')}}>Home</a>
               </li>
               <li class="nav-item">
-                <p class="nav-link" onClick={()=>{navigate('/blogform')}}>Blog Form</p>
+                <a href='/blogform' class="nav-link" onClick={()=>{navigate('/blogform')}}>Blog Form</a>
               </li>
             </ul>
             <form class="d-flex" role="search">

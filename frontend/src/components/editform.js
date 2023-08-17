@@ -13,7 +13,7 @@ function Editform() {
         Description: ''
     })
     useEffect(()=>{
-        axios.get('http://localhost:8040/blogform/'+id)
+        axios.get('https://reactblog-0n93.onrender.com/blogform/'+id)
         .then(res=>{
             // console.log(res);
             setValues({title: res.data.title, subtitle: res.data.subtitle, Description: res.data.Description});
@@ -24,7 +24,7 @@ function Editform() {
 
     const editSubmit = async(e)=>{
         e.preventDefault();
-        axios.put('http://localhost:8040/rename/'+id, values)
+        axios.put('https://reactblog-0n93.onrender.com/rename/'+id, values)
         .then(res=>{
             navigate('/home')
         }).catch(err =>{
