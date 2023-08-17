@@ -29,6 +29,6 @@ Feature are: -
 3. Deleting specific blog, which you want to delete it.
 4. Filter the blog part functionality.
 5. Signup, login & logout - For visiting this website, need to create account then login.
-6. Update blog list is in progress, working on it.
+6. Update the blog data which you want to update it(Anyone blog you can update).
 
 Deployed link of this project  -  https://simple-reactblog-app.netlify.app/
