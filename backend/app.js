@@ -16,6 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGO_DB_NAME, 
 {
@@ -45,6 +46,17 @@ app.get('/blogform',cors(), async(req, res)=>{
     }
 })
 
+app.get('/blogform/:id',cors(), async(req, res)=>{ // get specific blog
+    try {
+        // console.log(req.params, "get DATA !");
+        const Blog = await blog.findOne({_id: req.params.id});
+        console.log(Blog);
+        res.status(200).send(Blog);
+    } catch (error) {
+        console.log(error);
+    }
+})
+
 app.post('/post', async(req, res)=>{ // create blog API
     const Blog = new blog({
         title: req.body.title,
@@ -62,6 +74,33 @@ app.post('/post', async(req, res)=>{ // create blog API
         });
     } catch (error) {
         console.log(error);
+    }
+})
+
+app.put('/rename/:id', async(req, res)=>{ // update blog API
+    try {
+        // console.log(req.params.id);
+        const Blog = await blog.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        console.log(Blog);
+        if (!Blog) {
+            res.send({
+                status: 401,
+                message: 'Error of status 401 while updating Process !',
+                error: 'Error 401 found !'
+            });
+        }
+        res.send({
+            status: 200,
+            message: 'Updated One Row sucessfully !',
+            blogData: Blog
+        });
+
+    } catch (error) {
+        res.send({
+            status: 500,
+            message: 'Error of status 500 while updating Process !',
+            error: error
+        });
     }
 })
 

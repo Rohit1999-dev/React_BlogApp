@@ -1,12 +1,15 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import {useNavigate} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
+
 function Blog() {
+  
   const navigate = useNavigate();
   const [opinion, setBlog] = useState([])
   const [records, setRecords] = useState([])
   const [filterData, setFilterData] = useState('');
+
 // const getDataArray = async()=>{
 //   axios.get('http://localhost:8000/get')
 //   .then(res =>{
@@ -55,6 +58,20 @@ const deleteData = async(_id)=>{ // delete api by id for frontend code
   
 }
 
+// const editData = async(_id)=>{
+//   if(window.confirm(`Are you sure you want to edit this data ${_id}`)){
+//     axios.get('http://localhost:8040/blogform/' + _id)
+//       .then(res => {
+//         navigate('/edit');
+//         console.log(res.data);
+//       }).catch(err => {
+//         console.log(err);
+//       })
+//   }else{
+//     console.log('data is not editable !');
+//   }
+// }
+
 const logOutButton = async(e)=>{
   alert("Logout Sucessfully !");
       e.preventDefault();
@@ -64,7 +81,7 @@ const logOutButton = async(e)=>{
   return (
     <>
     <div className='container' style={{backgroundColor: "skyblue"}}>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" sticky="top">
         <div class="container-fluid">
           <a class="navbar-brand" href="!#"><b>Opinion App</b></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,6 +117,7 @@ const logOutButton = async(e)=>{
               <h6 class="card-subtitle mb-2 text-body-secondary">{ele.subtitle}</h6>
               <p class="card-text">{ele.Description}</p>
               <button style={{alignItems: "center"}} onClick={()=>deleteData(ele._id)} class="btn btn-primary">Delete</button>
+              <Link style={{alignItems: "center", marginLeft: "5px"}} to={`/edit/${ele._id}`} class="btn btn-primary">Edit</Link>
             </div>
           </div>
         )

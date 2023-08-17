@@ -5,6 +5,7 @@ import BlogPage from './components/blogform';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './components/login';
 import SignUp from './components/signup';
+import Editform from './components/editform';
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
         <Route
             path="/home"
             element={ <Blog/> }
+        />
+         <Route
+            path="/edit/:id"
+            element={ <Editform/> }
         />
         <Route
             path="/blogform"
